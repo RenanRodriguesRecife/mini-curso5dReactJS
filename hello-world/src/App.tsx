@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 
@@ -5,13 +6,15 @@ const App = () => {
 
     let name = "Renan";
     let age = 90;
+
+    const [bg, setBg] = useState("#FF0000")
     
     const handleClick = () => {
-        alert("Clicou na função");
+        setBg('#0000FF')
     }
 
     return (
-        <div style={{backgroundColor: "#FF0000"}}>
+        <div style={{backgroundColor: bg}}>
         <Header name={name} age={age}/>
         
         <button onClick={handleClick}>Click aqui</button>
