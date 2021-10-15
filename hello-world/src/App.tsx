@@ -8,6 +8,13 @@ const App = () => {
     const [age, setAge] = useState(90);
     const [bg, setBg] = useState("#FF0000")
     
+    const [list, setList] = useState([
+        "O rato roeu a roupa do rei de roma",
+        "aqui vai uma frase poética",
+        "a inspiração desse programador é pouca"
+    ]);
+
+
     const handleClick20 = () => {
         setAge(20)
         setBg('#0000FF')
@@ -29,6 +36,12 @@ const App = () => {
         {age === 20 &&
         <button onClick={handleClick90}>Click aqui</button>
         }
+        <hr/>
+        <ul>
+            {list.map((frase,index)=>(
+                <li key={index}>{frase}</li>
+            ))}
+        </ul>
 
         <Footer/>
         </div>
