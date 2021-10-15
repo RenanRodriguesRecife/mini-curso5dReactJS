@@ -10,7 +10,7 @@ const App = () => {
         <div>
         <Header name={name} age={age}/>
         
-        <button>Click aqui</button>
+        <button onClick={()=>{alert("clicou")}}>Click aqui</button>
         
         <Footer/>
         </div>
