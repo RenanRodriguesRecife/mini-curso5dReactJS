@@ -5,12 +5,16 @@ const App = () => {
 
     let name = "Renan";
     let age = 90;
+    
+    const handleClick = () => {
+        alert("Clicou na função");
+    }
 
     return (
-        <div>
+        <div style={{backgroundColor: "#FF0000"}}>
         <Header name={name} age={age}/>
         
-        <button onClick={()=>{alert("clicou")}}>Click aqui</button>
+        <button onClick={handleClick}>Click aqui</button>
         
         <Footer/>
         </div>
